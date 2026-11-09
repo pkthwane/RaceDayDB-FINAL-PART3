@@ -1,0 +1,60 @@
+﻿@model RaceDayMVC.Models.Race
+@if (!string.IsNullOrEmpty(Model.BannerImageUrl))
+{
+    <img src="@Model.BannerImageUrl"
+         class="img-fluid rounded mb-3 w-100"
+         style="max-height:400px; object-fit:cover;"
+         alt="Race Banner" />
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
+<h2>@Model.Name</h2>
+
+<hr />
+
+<p>
+    <strong>Description:</strong>
+    @Model.Description
+</p>
+
+<p>
+    <strong>Event Type:</strong>
+    @Model.EventType
+</p>
+
+<p>
+    <strong>Date:</strong>
+    @Model.Date.ToShortDateString()
+</p>
+
+<p>
+    <strong>Location:</strong>
+    @Model.Location
+</p>
+
+<p>
+    <strong>Distance:</strong>
+    @Model.Distance km
+</p>
+
+<form asp-action="Register"
+      asp-route-id="@Model.RaceID"
+      method="post">
+
+    <button type="submit"
+            class="btn btn-success">
+        Register For Race
+    </button>
+
+</form>
+
+<br />
+<a asp-action="Index" class="btn btn-secondary">
+    Back to Races
+</a>

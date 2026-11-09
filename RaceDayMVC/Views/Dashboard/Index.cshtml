@@ -1,0 +1,43 @@
+﻿@model RaceDayMVC.Models.Dashboard
+
+<h2 class="mb-4">Organizer Dashboard</h2>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h5>Total Races</h5>
+                <h2>@Model.TotalRaces</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h5>Total Participants</h5>
+                <h2>@Model.TotalParticipants</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h5>Completed Races</h5>
+                <h2>@Model.CompletedRaces</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <h5>Upcoming Races</h5>
+                <h2>@Model.UpcomingRaces</h2>
+            </div>
+        </div>
+    </div>
+
+</div>

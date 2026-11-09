@@ -1,0 +1,28 @@
+﻿@model List<RaceDayMVC.Models.Registration>
+
+<h2>My Registrations</h2>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>Registration ID</th>
+            <th>Runner ID</th>
+            <th>Race ID</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var registration in Model)
+        {
+            <tr>
+                <td>@registration.RegID</td>
+                <td>@registration.RunnerID</td>
+                <td>@registration.RaceID</td>
+                <td>@registration.PaymentStatus</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

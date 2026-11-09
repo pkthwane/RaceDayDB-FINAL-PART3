@@ -1,0 +1,39 @@
+﻿@model List<RaceDayMVC.Models.Race>
+
+<h2>Available Races</h2>
+<p>
+    <a asp-action="Create"
+       class="btn btn-success">
+        Create Race
+    </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Distance</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var race in Model)
+        {
+            <tr>
+                <td>@race.Name</td>
+                <td>@race.Date.ToShortDateString()</td>
+                <td>@race.Location</td>
+                <td>@race.Distance km</td>
+                <td>
+                    <a asp-controller="Race"
+                       asp-action="Details"
+                       asp-route-id="@race.RaceID"
+                       class="btn btn-primary">
+                        View Details
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
