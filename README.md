@@ -1,3 +1,7 @@
+BASIC INSTRUCTIONS
+==================
+
+Click on "Code" then download the ZIP and extract, then open with Visual Studio
 
 INSTRUCTIONS For testing and running Race
 =========================================
